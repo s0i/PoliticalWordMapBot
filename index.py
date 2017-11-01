@@ -5,8 +5,9 @@ import json
 from os import environ
 from flask import Flask
 
+port = int(os.environ.get('PORT', 5000))
 app = Flask(__name__)
-app.run(environ.get('PORT'))
+app.run(host='0.0.0.0', port=port)
 
 threads = []
 keywords = ['trump', 'the_donald', 'administration', 'president', 'impeach', 'Trump', 'Impeach', 'Administration', 'The_Donald', 'The_donald', 'President', 'Mueller', 'mueller', 'investigation', 'Investigation', 'Russia', 'russia', 'Kremlin', 'kremlin']
