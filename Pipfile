@@ -4,7 +4,7 @@ verify_ssl = true
 
 [packages]
 praw = "*"
-Flask = "*"
+flask = "*"
 
 [requires]
 python_version = "3.6"
