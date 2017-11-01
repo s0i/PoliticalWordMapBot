@@ -2,7 +2,7 @@ import praw
 import requests
 import time
 import json
-from os import environ
+import os
 from flask import Flask
 
 port = int(os.environ.get('PORT', 5000))
