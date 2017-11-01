@@ -31,7 +31,7 @@ def main():
 		if any(keyword in sub.title for keyword in keywords):
 			if not any(sub.title in thread['title'] for thread in threads):
 				threads.append({'title': sub.title, 'time': time.time()})
-				print '\033[92m' + sub.title + ' @ ' + str(sub.created_utc)
+				print '\033[92m' + sub.title
 				subs.append(sub.title + '\n')
 				counter += 1
 				
