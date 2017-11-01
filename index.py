@@ -2,6 +2,11 @@ import praw
 import requests
 import time
 import json
+from os import environ
+from flask import Flask
+
+app = Flask(__name__)
+app.run(environ.get('PORT'))
 
 threads = []
 keywords = ['trump', 'the_donald', 'administration', 'president', 'impeach', 'Trump', 'Impeach', 'Administration', 'The_Donald', 'The_donald', 'President', 'Mueller', 'mueller', 'investigation', 'Investigation', 'Russia', 'russia', 'Kremlin', 'kremlin']
