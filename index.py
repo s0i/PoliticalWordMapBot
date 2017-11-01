@@ -31,7 +31,7 @@ def main():
 		if any(keyword in sub.title for keyword in keywords):
 			if not any(sub.title in thread['title'] for thread in threads):
 				threads.append({'title': sub.title, 'time': time.time()})
-				print '\033[92m' + sub.title
+				print('\033[92m' + sub.title)
 				subs.append(sub.title + '\n')
 				counter += 1
 				
@@ -43,7 +43,7 @@ def post():
 	r = requests.post(api['post'], data={ 'api_dev_key': api['dev_key'], 'api_option': 'paste', 'api_paste_code': ''.join(subs), 'api_user_key': api['key'], 'api_paste_private': '1', 'api_paste_name': time.time() })
 	pastes.append({'url': r.text, 'key': r.text.rsplit('/', 1)[-1]})
 
-	print '\033[94m' + pastes[-1]['url']
+	print('\033[94m' + pastes[-1]['url'])
 
 if __name__ == '__main__':
 	main()
